@@ -14,7 +14,7 @@ defmodule Us do
     end
   end
   def test() do
-    test(50).
+    test(50)
   end
   defp universal_server do
     receive do
