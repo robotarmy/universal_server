@@ -2,7 +2,7 @@
 #
 defmodule Us do
   def rtest(remote_pid,number) do
-    server_pid = spawn(&universal_server/0)
+    server_pid = spawn(&universal_server/0) # &function/0 is a function pointer to a zero argument function
     send(server_pid, {:become,&fac_server/0})
     send(server_pid, {remote_pid, number})
   end
